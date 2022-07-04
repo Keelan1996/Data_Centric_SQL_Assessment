@@ -1,0 +1,7 @@
+ SELECT o.oid, c.name
+     FROM organisation o
+     LEFT JOIN country_organisation co
+     ON o.oid = co.organisation
+     LEFT JOIN country c
+     ON c.cid = co.country
+     ORDER BY o.oid ASC;

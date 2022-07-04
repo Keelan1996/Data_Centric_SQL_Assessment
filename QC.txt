@@ -1,0 +1,2 @@
+ SELECT count(founded) AS "1940s" from organisation
+     WHERE year(founded) = 1949 OR year(founded) = 1945;

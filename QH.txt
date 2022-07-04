@@ -1,0 +1,8 @@
+ SELECT o.name
+     FROM organisation o
+     INNER JOIN country_organisation co
+     ON o.oid = co.organisation
+     INNER JOIN city c
+     ON co.country = c.country
+     WHERE c.country = "FRA" AND c.name = "Toulouse"
+     ORDER BY o.name ASC;

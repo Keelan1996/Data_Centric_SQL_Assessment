@@ -1,0 +1,2 @@
+ SELECT avg(population) AS "Average UK City" FROM city
+    WHERE country = "UK";

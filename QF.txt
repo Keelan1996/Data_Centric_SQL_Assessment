@@ -1,0 +1,10 @@
+ SELECT name,
+     CASE
+     WHEN population < 50000 THEN "Very Small"
+     WHEN population < 100000 THEN "Small"
+     WHEN population < 1000000 THEN "Medium"
+     WHEN population < 5000000 THEN "Large"
+     WHEN population >= 5000000 THEN "Gigantic"
+     END as "Size"
+     FROM city
+     ORDER BY name ASC;

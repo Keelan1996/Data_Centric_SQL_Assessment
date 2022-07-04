@@ -1,0 +1,12 @@
+ SELECT o.oid,
+     CASE
+     WHEN month(o.founded) IN (11) THEN "November"
+     WHEN month(o.founded) IN (4) THEN "April"
+     WHEN month(o.founded) IN (10) THEN "October"
+     END as "Founded"
+     FROM organisation o
+     INNER JOIN country_organisation co
+     ON o.oid = co.organisation
+     INNER JOIN country c
+     ON co.country = c.cid
+     WHERE c.name = "France";

@@ -1,0 +1,2 @@
+ SELECT name, population FROM country
+     Order by population DESC;

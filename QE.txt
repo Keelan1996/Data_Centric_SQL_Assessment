@@ -1,0 +1,6 @@
+ SELECT co.name, ci.name, ci.population
+     FROM country co
+     INNER JOIN city ci
+     ON co.cid = ci.country
+     WHERE ci.population > 4000000
+    ORDER BY co.name ASC;

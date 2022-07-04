@@ -1,0 +1,5 @@
+ SELECT co.name, ci.name
+     FROM country co
+     LEFT JOIN city ci
+     ON co.cid = ci.country
+     ORDER BY ci.population DESC;
